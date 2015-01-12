@@ -8,5 +8,13 @@
 	position: relative;
 }
 
+.thead{
+	background-color: #48f04e;
+	border: 1px green solid;
+	font-style: bold;
+	font-size: 17px;
+}
+
+
 @import "bootstrap-sprockets";
 @import "bootstrap";

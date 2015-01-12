@@ -1,7 +1,20 @@
-<h1>Contact Page for: </h1>
+<h1>Contact Page for <%= @user.first_name + @user.last_name %> </h1>
 
-<h3><%= @user.first_name %>
-<%= @user.last_name %>
-</h3>
+<h2>Contact Addresses: </h2>
+
+<div class ="row">
+	<div class="col-md-3 thead">Street Address</div>
+	<div class="col-md-3 thead">City</div>
+	<div class="col-md-3 thead">State</div>
+	<div class="col-md-3 thead">Zip</div>
+</div>
+	<% @addrs.each do |address| %>
+	<div class="row">
+		<div class="col-md-3"><%= address.street %></div>
+		<div class="col-md-3"><%= address.city %></div>
+		<div class="col-md-3"><%= address.state %></div>
+		<div class="col-md-3"><%= address.zip %></div>
+	</div>
+	<% end %>
 
 <%= render "new_addr_form" %>

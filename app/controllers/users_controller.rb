@@ -6,6 +6,7 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @addr = @user.addrs.new
+    @addrs = @user.addrs.all
   end
 
   def new

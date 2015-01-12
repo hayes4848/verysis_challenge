@@ -1,8 +1,16 @@
 
-<%= simple_form_for(@addr, url: user_addr_path(@user)) do |f| %>
-  <%= f.input :street %>
-  <%= f.input :city %>
-  <%= f.input :state %>
-  <%= f.input :zip %>
-  <%= f.button :submit %>
-<% end %>
+<h2>Add Address for <%= @user.first_name %></h2>
+
+<div class="row">
+	<%= simple_form_for(@addr, url: user_addr_path(@user)) do |f| %>
+	 <div class="row">
+	 	<div class="col-md-6 "><%= f.input :street %></div>
+	  <div class="col-md-6 "><%= f.input :city %></div>
+	</div>
+	<div class="row">
+	  <div class="col-md-6 "><%= f.input :state %></div>
+	  <div class="col-md-6 "><%= f.input :zip %></div>
+	</div>
+	  <div class="col-md-6 text-right"><%= f.button :submit %></div>
+	<% end %>
+	</div>
