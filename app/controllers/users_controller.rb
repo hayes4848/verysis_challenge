@@ -5,10 +5,20 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @addr = @user.addrs.new
   end
 
   def new
     @user = User.new
+  end
+
+  def create_addr
+    @user = User.find(params[:user_id])
+    @addr = @user.addrs.new(params[:addr])
+
+    if @user.save
+      redirect_to @user
+    end
   end
 
   def create

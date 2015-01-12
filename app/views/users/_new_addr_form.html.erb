@@ -1,0 +1,8 @@
+
+<%= simple_form_for(@addr, url: user_addr_path(@user)) do |f| %>
+  <%= f.input :street %>
+  <%= f.input :city %>
+  <%= f.input :state %>
+  <%= f.input :zip %>
+  <%= f.button :submit %>
+<% end %>

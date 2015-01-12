@@ -2,7 +2,9 @@ AddressBook::Application.routes.draw do
   
     root to: "users#index"
 
-    resources :users 
+    resources :users do 
+      post 'addr', to: "users#create_addr", as: :addr
+    end
 
   # get "users/index"
 
