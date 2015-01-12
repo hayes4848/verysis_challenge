@@ -3,14 +3,12 @@
 
 <div class="row">
 	<%= simple_form_for(@addr, url: user_addr_path(@user)) do |f| %>
-	 <div class="row">
-	 	<div class="col-md-6 "><%= f.input :street %></div>
-	  <div class="col-md-6 "><%= f.input :city %></div>
+	 <div class="row text-right">
+	 	<div class="col-md-8 "><%= f.input :street %></div>
+	  <div class="col-md-8 "><%= f.input :city %></div>
+	  <div class="col-md-8 "><%= f.input :state %></div>
+	  <div class="col-md-8 "><%= f.input :zip %></div>
+	  <div class="col-md-12 text-center"><%= f.button :submit, "Add Address" %></div>
 	</div>
-	<div class="row">
-	  <div class="col-md-6 "><%= f.input :state %></div>
-	  <div class="col-md-6 "><%= f.input :zip %></div>
-	</div>
-	  <div class="col-md-6 text-right"><%= f.button :submit %></div>
 	<% end %>
 	</div>

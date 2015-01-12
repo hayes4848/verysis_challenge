@@ -15,6 +15,15 @@
 	font-size: 17px;
 }
 
+.tbody{
+	border-bottom: 1px solid #dfe6df;
+	padding-top: 10px;
+}
+.contact-name{
+	font-size: 18px;
+	font-style: bold;
+}
+
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
