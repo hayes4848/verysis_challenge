@@ -1,0 +1,16 @@
+<div class="container text-center">
+	<h1>Users Index Page</h1>
+
+<div class="row">
+	<%= link_to "Add a new Contact", new_user_path %>
+		<% @users.each do |user| %>
+	<div class="row">
+			<%= user.first_name %>
+			<%= user.last_name %>
+
+			<%= link_to "Edit Contact", edit_user_path(user) %>
+			<%= link_to 'Delete User', user, method: :delete, data: { confirm: 'Are you sure?' } %>
+		</div>
+		<% end %>
+	</div>
+</div>
